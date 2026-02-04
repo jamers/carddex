@@ -18,12 +18,14 @@
 
         <htmlunit.version>2.70.0</htmlunit.version>
         <jackson-databind.version>2.18.0</jackson-databind.version>
+        <jsoup.version>1.16.1</jsoup.version>
         <junit-jupiter-api.version>6.0.0-RC2</junit-jupiter-api.version>
         <lombok.version>1.18.40</lombok.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- Scraper -->
             <dependency>
                 <groupId>net.sourceforge.htmlunit</groupId>
                 <artifactId>htmlunit</artifactId>
@@ -35,10 +37,25 @@
                 <version>${jackson-databind.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup.version}</version>
+            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.google.code.gson</groupId>-->
+<!--                <artifactId>gson</artifactId>-->
+<!--                <version>2.13.2</version>-->
+<!--            </dependency>-->
+
+
+            <!-- Utils -->
+            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+
+            <!-- Test -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
